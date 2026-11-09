@@ -103,7 +103,13 @@ export function DashboardPage({ transactions, onAddTransaction, language }: Dash
           <h1>{translate(language, 'greeting')} <span>Đức Duy</span> <span className="wave" aria-hidden="true">✦</span></h1>
           <p className="welcome-subtitle">{translate(language, 'welcomeSubtitle')}</p>
         </div>
-        <button type="button" className="primary-button add-button" onClick={() => setDialogOpen(true)}>
+        <button
+          type="button"
+          className="primary-button add-button"
+          aria-haspopup="dialog"
+          aria-expanded={dialogOpen}
+          onClick={() => setDialogOpen(true)}
+        >
           <Icon name="plus" /> {translate(language, 'addTransaction')}
         </button>
       </section>
@@ -189,9 +195,14 @@ export function DashboardPage({ transactions, onAddTransaction, language }: Dash
             ? <><strong>{selectedIds.length}</strong> {translate(language, 'compareCount')}</>
             : translate(language, 'compareInstruction')}</span>
           {selectedIds.length > 0 && (
-            <button type="button" className="text-button" onClick={() => setSelectedIds([])}>
-              {translate(language, 'clearComparison')}
-            </button>
+            <>
+              <a className="text-button view-comparison-link" href="#comparison-title">
+                {translate(language, 'viewComparison')}
+              </a>
+              <button type="button" className="text-button" onClick={() => setSelectedIds([])}>
+                {translate(language, 'clearComparison')}
+              </button>
+            </>
           )}
         </div>
 
@@ -262,27 +273,51 @@ export function DashboardPage({ transactions, onAddTransaction, language }: Dash
         </div>
       </section>
 
-      {comparisonItems.length > 0 && (
-        <section className="panel comparison-panel" aria-labelledby="comparison-title">
+      <section className="panel comparison-panel" aria-labelledby="comparison-title">
           <div className="comparison-panel-heading">
             <div>
-              <span className="eyebrow"><span className="eyebrow-rule" /> {translate(language, 'compareCount').toLocaleUpperCase(language)}</span>
+              <span className="eyebrow">
+                <span className="eyebrow-rule" />
+                {selectedIds.length > 0
+                  ? `${selectedIds.length} ${translate(language, 'compareCount')}`.toLocaleUpperCase(language)
+                  : translate(language, 'compare').toLocaleUpperCase(language)}
+              </span>
               <h2 id="comparison-title">{translate(language, 'comparisonTitle')}</h2>
             </div>
-            <button type="button" className="filter-button" onClick={() => setSelectedIds([])}>
-              <Icon name="close" /> {translate(language, 'clearComparison')}
-            </button>
+            {selectedIds.length > 0 && (
+              <button type="button" className="filter-button" onClick={() => setSelectedIds([])}>
+                <Icon name="close" /> {translate(language, 'clearComparison')}
+              </button>
+            )}
           </div>
-          <div className="comparison-table-wrap">
+          {comparisonItems.length < 2 ? (
+            <div className="comparison-empty-state" role="status" aria-live="polite">
+              <span className="empty-icon"><Icon name="grid" /></span>
+              <strong>{comparisonItems.length === 1
+                ? translate(language, 'comparisonOneSelected')
+                : translate(language, 'comparisonEmptyTitle')}</strong>
+              {comparisonItems.length === 0 && <p>{translate(language, 'comparisonEmptyDescription')}</p>}
+              <a className="comparison-select-link" href="#transactions">
+                {translate(language, 'transactions')}
+                <Icon name="chevronRight" size={15} />
+              </a>
+            </div>
+          ) : (
+            <div className="comparison-table-wrap">
             <table className="comparison-table">
               <thead>
                 <tr>
-                  <th>{translate(language, 'compareColumn')}</th>
+                  <th scope="col">{translate(language, 'compareColumn')}</th>
                   {comparisonItems.map((item) => (
-                    <th key={item.id}>
+                    <th scope="col" key={item.id}>
                       <span className="comparison-item-heading">
                         {item.merchant}
-                        <button type="button" onClick={() => toggleComparison(item.id)} aria-label={`${language === 'vi' ? 'Bỏ so sánh' : 'Remove from comparison'}: ${item.merchant}`}>
+                        <button
+                          type="button"
+                          onClick={() => toggleComparison(item.id)}
+                          aria-label={`${language === 'vi' ? 'Bỏ so sánh' : 'Remove from comparison'}: ${item.merchant}`}
+                          title={translate(language, 'clearComparison')}
+                        >
                           <Icon name="close" size={14} />
                         </button>
                       </span>
@@ -292,30 +327,30 @@ export function DashboardPage({ transactions, onAddTransaction, language }: Dash
               </thead>
               <tbody>
                 <tr>
-                  <th>{translate(language, 'amount')}</th>
+                  <th scope="row">{translate(language, 'amount')}</th>
                   {comparisonItems.map((item) => <td key={item.id} className={item.kind === 'income' ? 'positive-amount' : ''}>{item.kind === 'income' ? '+' : '−'}{formatCurrency(item.amount)}</td>)}
                 </tr>
                 <tr>
-                  <th>{translate(language, 'category')}</th>
+                  <th scope="row">{translate(language, 'category')}</th>
                   {comparisonItems.map((item) => <td key={item.id}>{translateCategory(item.category, language)}</td>)}
                 </tr>
                 <tr>
-                  <th>{translate(language, 'date')}</th>
+                  <th scope="row">{translate(language, 'date')}</th>
                   {comparisonItems.map((item) => <td key={item.id}>{transactionDate(item.date, language, { day: 'numeric', month: 'short', year: 'numeric' })}</td>)}
                 </tr>
                 <tr>
-                  <th>{translate(language, 'paymentMethod')}</th>
+                  <th scope="row">{translate(language, 'paymentMethod')}</th>
                   {comparisonItems.map((item) => <td key={item.id}>{translatePaymentMethod(item.paymentMethod, language)}</td>)}
                 </tr>
                 <tr>
-                  <th>{translate(language, 'transactionType')}</th>
+                  <th scope="row">{translate(language, 'transactionType')}</th>
                   {comparisonItems.map((item) => <td key={item.id}>{item.kind === 'income' ? incomeLabel : expenseLabel}</td>)}
                 </tr>
               </tbody>
             </table>
           </div>
+          )}
         </section>
-      )}
 
       {dialogOpen && <TransactionDialog language={language} onClose={() => setDialogOpen(false)} onSave={saveTransaction} />}
     </div>

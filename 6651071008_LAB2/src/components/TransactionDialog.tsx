@@ -33,11 +33,7 @@ export function TransactionDialog({ language, onClose, onSave }: TransactionDial
 
   useEffect(() => {
     const dialog = dialogRef.current
-    if (!dialog) return
-    dialog.showModal()
-    return () => {
-      if (dialog.open) dialog.close()
-    }
+    if (dialog && !dialog.open) dialog.showModal()
   }, [])
 
   const updateKind = (kind: TransactionKind) => {
@@ -113,7 +109,7 @@ export function TransactionDialog({ language, onClose, onSave }: TransactionDial
                 id="transaction-amount"
                 type="number"
                 min="1"
-                step="1000"
+                step="1"
                 inputMode="numeric"
                 placeholder={translate(language, 'amountPlaceholder')}
                 value={draft.amount || ''}
