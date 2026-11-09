@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760" role="img" aria-labelledby="title description">
+  <title id="title">Wireframe Ví Mộc</title>
+  <desc id="description">Phác thảo trang tổng quan, lọc khoảng giá và ngày, bảng so sánh giao dịch.</desc>
+  <rect width="1180" height="760" fill="#f3f5f2"/>
+  <text x="44" y="46" fill="#26372f" font-family="Arial, sans-serif" font-size="21" font-weight="700">VÍ MỘC · WIREFRAME</text>
+  <text x="44" y="69" fill="#77847c" font-family="Arial, sans-serif" font-size="12">Bố cục desktop · MSSV 6651071008 · F=8</text>
+
+  <rect x="38" y="98" width="1104" height="620" rx="12" fill="#fff" stroke="#d8dfd9"/>
+  <rect x="38" y="98" width="176" height="620" rx="12" fill="#f8faf8" stroke="#e0e6e1"/>
+  <rect x="58" y="118" width="28" height="28" rx="8" fill="#059669"/>
+  <text x="97" y="137" fill="#33473b" font-family="Arial, sans-serif" font-size="16" font-weight="700">ví mộc.</text>
+  <text x="58" y="185" fill="#77847c" font-family="Arial, sans-serif" font-size="8" letter-spacing="1">KHÔNG GIAN CỦA BẠN</text>
+  <rect x="54" y="204" width="143" height="33" rx="6" fill="#e5f3ec"/>
+  <text x="69" y="225" fill="#17684f" font-family="Arial, sans-serif" font-size="10">▦  Tổng quan</text>
+  <text x="69" y="262" fill="#68766e" font-family="Arial, sans-serif" font-size="10">▤  Giao dịch</text>
+  <text x="69" y="299" fill="#68766e" font-family="Arial, sans-serif" font-size="10">▦  So sánh</text>
+  <rect x="54" y="626" width="143" height="65" rx="7" fill="#f0f5f0" stroke="#e2e8e2"/>
+  <text x="67" y="650" fill="#68766e" font-family="Arial, sans-serif" font-size="9">“Chi tiêu an tâm,</text>
+  <text x="67" y="665" fill="#68766e" font-family="Arial, sans-serif" font-size="9">sống đủ đầy.”</text>
+
+  <rect x="214" y="98" width="928" height="42" fill="#fff" stroke="#e0e6e1"/>
+  <text x="239" y="124" fill="#77847c" font-family="Arial, sans-serif" font-size="9">Không gian cá nhân  /  Tổng quan</text>
+  <rect x="974" y="107" width="37" height="25" rx="5" fill="#fff" stroke="#e0e6e1"/>
+  <text x="986" y="124" fill="#17684f" font-family="Arial, sans-serif" font-size="9" font-weight="700">EN</text>
+  <circle cx="1052" cy="120" r="13" fill="#f6f8f6"/>
+  <text x="1047" y="124" fill="#77847c" font-family="Arial, sans-serif" font-size="10">◐</text>
+
+  <text x="239" y="169" fill="#77847c" font-family="Arial, sans-serif" font-size="8" letter-spacing="1">THỨC DẬY CÙNG SỰ AN TÂM</text>
+  <text x="239" y="194" fill="#26372f" font-family="Georgia, serif" font-size="18">Chào buổi sáng, Đức Duy</text>
+  <text x="239" y="211" fill="#77847c" font-family="Arial, sans-serif" font-size="9">Đây là bức tranh tài chính của bạn hôm nay.</text>
+  <rect x="996" y="167" width="119" height="32" rx="6" fill="#059669"/>
+  <text x="1013" y="188" fill="#fff" font-family="Arial, sans-serif" font-size="9">＋ Thêm giao dịch</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="239" y="229" width="210" height="83" rx="7" fill="#267e62"/>
+    <text x="253" y="250" fill="#e5f3ea" font-size="8">Số dư hiện tại</text>
+    <text x="253" y="277" fill="#fff" font-size="16" font-weight="700">18.420.000 ₫</text>
+    <text x="253" y="296" fill="#d2e8da" font-size="8">Tổng cộng</text>
+    <rect x="459" y="229" width="210" height="83" rx="7" fill="#fff" stroke="#e0e6e1"/>
+    <text x="473" y="250" fill="#77847c" font-size="8">Tổng thu tháng này</text>
+    <text x="473" y="277" fill="#26372f" font-size="15" font-weight="700">20.550.000 ₫</text>
+    <text x="473" y="296" fill="#438267" font-size="8">Khoản thu đã ghi nhận</text>
+    <rect x="679" y="229" width="210" height="83" rx="7" fill="#fff" stroke="#e0e6e1"/>
+    <text x="693" y="250" fill="#77847c" font-size="8">Tổng chi tháng này</text>
+    <text x="693" y="277" fill="#26372f" font-size="15" font-weight="700">2.130.000 ₫</text>
+    <text x="693" y="296" fill="#9a6e5a" font-size="8">Khoản chi đã ghi nhận</text>
+    <rect x="899" y="229" width="216" height="83" rx="7" fill="#fff" stroke="#e0e6e1"/>
+    <text x="913" y="250" fill="#77847c" font-size="8">Còn lại tháng này</text>
+    <text x="913" y="277" fill="#26372f" font-size="15" font-weight="700">18.420.000 ₫</text>
+    <text x="913" y="296" fill="#8b7842" font-size="8">Thu nhập sau khi chi tiêu</text>
+  </g>
+
+  <rect x="239" y="327" width="876" height="115" rx="7" fill="#fbfcfa" stroke="#e0e6e1"/>
+  <text x="256" y="352" fill="#26372f" font-family="Arial, sans-serif" font-size="10" font-weight="700">Lọc theo giá và ngày</text>
+  <text x="256" y="369" fill="#77847c" font-family="Arial, sans-serif" font-size="8">Để trống khoảng nào nếu không muốn lọc theo tiêu chí đó.</text>
+  <g font-family="Arial, sans-serif" font-size="8" fill="#68766e">
+    <text x="256" y="394">Từ ngày</text><text x="464" y="394">Đến ngày</text><text x="672" y="394">Giá thấp nhất</text><text x="880" y="394">Giá cao nhất</text>
+  </g>
+  <g fill="#fff" stroke="#dfe6e0">
+    <rect x="256" y="400" width="190" height="27" rx="5"/><rect x="464" y="400" width="190" height="27" rx="5"/>
+    <rect x="672" y="400" width="190" height="27" rx="5"/><rect x="880" y="400" width="190" height="27" rx="5"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="8" fill="#9aa59f">
+    <text x="266" y="418">dd/mm/yyyy</text><text x="474" y="418">dd/mm/yyyy</text><text x="682" y="418">0 ₫</text><text x="890" y="418">∞</text>
+  </g>
+
+  <rect x="239" y="456" width="876" height="223" rx="7" fill="#fff" stroke="#e0e6e1"/>
+  <text x="256" y="479" fill="#26372f" font-family="Georgia, serif" font-size="12">Giao dịch gần đây</text>
+  <text x="256" y="496" fill="#77847c" font-family="Arial, sans-serif" font-size="8">Mọi khoản thu chi của bạn, ở cùng một nơi.</text>
+  <rect x="239" y="508" width="876" height="29" fill="#f8faf8"/>
+  <g font-family="Arial, sans-serif" font-size="8" fill="#77847c">
+    <text x="256" y="527">□　Giao dịch</text><text x="538" y="527">Danh mục</text><text x="692" y="527">Ngày</text><text x="829" y="527">Thanh toán</text><text x="1010" y="527">Số tiền</text>
+  </g>
+  <path d="M239 537H1115M239 580H1115M239 623H1115" stroke="#edf0ed"/>
+  <g font-family="Arial, sans-serif" font-size="8" fill="#33473b">
+    <text x="256" y="562">☑　Bếp Nhà Mình</text><text x="538" y="562">Ăn uống</text><text x="692" y="562">Hôm nay</text><text x="829" y="562">Ví điện tử</text><text x="1010" y="562">−65.000 ₫</text>
+    <text x="256" y="605">☑　Công ty An Phúc</text><text x="538" y="605">Lương</text><text x="692" y="605">Hôm nay</text><text x="829" y="605">Chuyển khoản</text><text x="1010" y="605">+18.500.000 ₫</text>
+    <text x="256" y="648">□　Xanh SM</text><text x="538" y="648">Di chuyển</text><text x="692" y="648">Hôm qua</text><text x="829" y="648">Thẻ ngân hàng</text><text x="1010" y="648">−42.000 ₫</text>
+  </g>
+  <text x="256" y="699" fill="#77847c" font-family="Arial, sans-serif" font-size="8">Khi chọn nhiều mục, bảng so sánh sẽ xuất hiện bên dưới.</text>
+</svg>
